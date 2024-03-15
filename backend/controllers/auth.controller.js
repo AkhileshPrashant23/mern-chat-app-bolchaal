@@ -4,13 +4,13 @@ import generateTokenAndSetCookie from '../utils/generateToken.js';
 
 export const signup = async(req, res) =>{
     try{
-        const {fullName , userName , password , confirmPassword,gender} = req.body
+        const {fullName , userName , password , confirmPassword,gender} = req.body;
 
         if(password!= confirmPassword){
             return res.status(400).json({error: "Password don`t match"})
         }
         
-        const user = await User.findOne({userName})
+        const user = await User.findOne({ userName })
         
         if(user){
              return res.status(400).json({error: "Username already exists"})    
@@ -56,7 +56,7 @@ export const signup = async(req, res) =>{
    
 }
 
-export const login = async(req, res) =>{
+export const login = async (req, res) =>{
     try {
         const {userName , password} = req.body;
         const user = await User.findOne({userName});

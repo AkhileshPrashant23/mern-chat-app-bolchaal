@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {},
+    // colors: {
+    //   'lgt-yellow': "#C1C07AAB"
+    // }
   },
   plugins: [require("daisyui")],
 }
