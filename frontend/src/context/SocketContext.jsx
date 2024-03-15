@@ -15,7 +15,7 @@ import { useAuthContext } from "./AuthContext";
 
     useEffect(() => {
         if(authUser) {
-            const socket = io("https://bolchaal.onrender.com" , {
+            const socket = io("https://bolchaalapp.onrender.com" , {
                 query: {
                     userId: authUser._id
                 },
